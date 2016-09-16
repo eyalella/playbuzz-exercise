@@ -1,0 +1,15 @@
+<div layout="column">
+  <md-autocomplete
+    md-selected-item="selectedItem"
+    md-search-text="vm.src"
+    md-items="item in vm.getMatches(vm.src)"
+    md-item-text="item.display"
+  >
+    <span md-highlight-text="searchText">{{item.snippet.title}}</span>
+  </md-autocomplete>
+  <iframe
+    src="{{vm.src}}"
+    frameBorder="0"
+    allowFullScreen
+  />
+</div>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PlayBuzz Video App</title>
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="src/app.css">
+  </head>
+  <body>
+
+    <div ng-app="videoApp" ng-cloak>
+
+
+      <md-content class="md-padding">
+        <md-nav-bar
+          md-selected-nav-item="currentNavItem" 
+          nav-bar-aria-label="navigation links"
+        >
+          <md-nav-item md-nav-sref="search" name="search">search</md-nav-item>
+          <md-nav-item md-nav-sref="play" name="play">play</md-nav-item>
+        </md-nav-bar>
+        <ui-view></ui-view>
+      </md-content>
+
+    </div>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-youtube-api-factory/dist/angular-youtube-api-factory.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+
+    <script src="auth.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/controllers/searchController.js"></script>
+    <script src="src/services/youtubeSearchService.js"></script>
+
+  </body>
+</html>

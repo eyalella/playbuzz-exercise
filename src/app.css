@@ -1,17 +1,21 @@
 * {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  background: #ececec;
 }
-md-content, [ng-app="videoApp"] {
+md-content,
+[ng-app="videoApp"] {
   height: 100%;
   width: 100%;
 }
-md-content, md-nav-bar {
+md-content,
+md-nav-bar {
   display: flex;
   flex-direction: column;
 }
@@ -20,7 +24,8 @@ ui-view {
   flex-direction: column;
   flex: 1;
 }
-iframe, .view {
+iframe,
+.view {
   flex: 1;
 }
 .custom-input {
@@ -38,8 +43,47 @@ iframe-directive {
   flex: 1;
   display: flex;
 }
+iframe-directive iframe {
+  background: #fff;
+  box-sizing: inherit;
+  box-shadow:
+    inset 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    inset 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    inset 0px 2px 1px -1px rgba(0, 0, 0, 0.12)
+
+}
 .error {
   font-size: 14px;
   color: #dd2222;
   margin: 15px
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.input-container md-autocomplete,
+.input-container input {
+  flex: 1;
+}
+.input-container md-checkbox {
+  margin: 0 15px 0 0;
+}
+p.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  padding: 16px;
+  margin: 0;
+}
+p.option:hover {
+  background: #efefef;
+}
+.iframe-loading {
+  color: #aaa;
+  position: absolute;
+  padding: 15px;
+  font-size: 14px;
 }

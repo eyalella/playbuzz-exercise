@@ -1,14 +1,26 @@
 <div class="view" layout="column">
   <h1 class="md-title">Search</h1>
-  <md-autocomplete
-    md-selected-item="vm.selectedVideo"
-    md-selected-item-change="vm.updateVideoSrc()"
-    md-search-text="vm.query"
-    md-items="item in vm.getMatches(vm.query)"
-    md-item-text="item.snippet.title"
-    placeholder="Start typing to search YouTube via the YouTube API..."
-  >
-    <span md-highlight-text="searchText">{{item.snippet.title}}</span>
-  </md-autocomplete>
-  <iframe-directive video-id="{{vm.videoId}}" />
+  <div class="input-container">
+    <md-checkbox
+      ng-model="vm.autoplay"
+      aria-label="Autoplay"
+      ng-click="vm.toggleAutoplay()"
+    >
+      Autoplay
+    </md-checkbox>
+    <md-autocomplete
+      md-selected-item="vm.selectedVideo"
+      md-selected-item-change="vm.updateVideoSrc()"
+      md-search-text="vm.query"
+      md-items="item in vm.getMatches(vm.query)"
+      md-item-text="item.snippet.title"
+      placeholder="Start typing to search YouTube via the YouTube API..."
+    >
+      <span md-highlight-text="searchText">{{item.snippet.title}}</span>
+    </md-autocomplete>
+  </div>
+  <iframe-directive
+    video-id="{{vm.videoId}}"
+    autoplay="vm.autoplay"
+  />
 </div>

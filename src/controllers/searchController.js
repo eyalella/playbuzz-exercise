@@ -1,18 +1,25 @@
 angular.module('videoApp').controller('searchController', function (
   $scope,
-  youtubeFactory
+  youtubeFactory,
+  autoplayStateService
 ) {
   var vm = this
 
   vm.videoId = ''
   vm.query = ''
   vm.selectedVideo = null
+  vm.autoplay = autoplayStateService.getState()
 
   vm.getMatches = getMatches
   vm.updateVideoSrc = updateVideoSrc
+  vm.toggleAutoplay = toggleAutoplay
 
   function updateVideoSrc () {
     vm.videoId = vm.selectedVideo.id.videoId
+  }
+
+  function toggleAutoplay () {
+    autoplayStateService.toggleState()
   }
 
   function getMatches (searchText) {

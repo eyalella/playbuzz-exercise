@@ -1,17 +1,29 @@
 <div class="view" layout="column">
   <h1 class="md-title">Play</h1>
-  <input
-    type="text"
-    ng-model="vm.query"
-    ng-change="vm.updateVideoSrc(vm.query)"
-    placeholder="Paste any valid YouTube URL to load the video..."
-    class="custom-input"
-  >
+  <div class="input-container">
+    <md-checkbox
+      ng-model="vm.autoplay"
+      aria-label="Autoplay"
+      ng-click="vm.toggleAutoplay()"
+    >
+      Autoplay
+    </md-checkbox>
+    <input
+      type="text"
+      ng-model="vm.query"
+      ng-change="vm.updateVideoSrc(vm.query)"
+      placeholder="Paste any valid YouTube URL to load the video..."
+      class="custom-input"
+    >
+  </div>
   <div
     class="error"
-    ng-if="!vm.valid"
+    ng-show="!vm.valid"
   >
     Not a valid YouTube URL...
   </div>
-  <iframe-directive video-id="{{vm.videoId}}" />
+  <iframe-directive
+    video-id="{{vm.videoId}}"
+    autoplay="vm.autoplay"
+  />
 </div>

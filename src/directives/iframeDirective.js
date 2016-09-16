@@ -2,7 +2,10 @@ angular.module('videoApp').directive('iframeDirective', function ($sce) {
   var YOUTUBE_BASE = 'https://www.youtube.com/embed/'
 
   return {
-    scope: {videoId: '@'},
+    scope: {
+      videoId: '@',
+      autoplay: '<'
+    },
     templateUrl: 'src/views/iframe.html',
     controller: controller,
     bindToController: true,
@@ -25,7 +28,8 @@ angular.module('videoApp').directive('iframeDirective', function ($sce) {
     function setSecureSrc () {
       if (vm.videoId) {
         var url = YOUTUBE_BASE + vm.videoId
-        vm.scureSrc = $sce.trustAsResourceUrl(url)
+        var autoplayUrl = url + '?autoplay=1'
+        vm.scureSrc = $sce.trustAsResourceUrl(vm.autoplay ? autoplayUrl : url)
       }
     }
   }

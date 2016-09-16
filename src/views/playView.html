@@ -1,0 +1,15 @@
+<div class="search-view" layout="column">
+  <md-input-container>
+    <label>url</label>
+    <input
+      type="text"
+      ng-model="vm.query"
+      ng-change="vm.updateVideoSrc(vm.query)"
+    >
+  </md-input-container>
+  <iframe
+    src="{{vm.src}}"
+    frameBorder="0"
+    allowFullScreen
+  />
+</div>

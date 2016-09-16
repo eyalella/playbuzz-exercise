@@ -5,6 +5,7 @@
     md-search-text="vm.query"
     md-items="item in vm.getMatches(vm.query)"
     md-item-text="item.snippet.title"
+    placeholder="Start typing to search YouTube via the YouTube API..."
   >
     <span md-highlight-text="searchText">{{item.snippet.title}}</span>
   </md-autocomplete>

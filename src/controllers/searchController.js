@@ -1,4 +1,8 @@
-angular.module('videoApp').controller('searchController', function ($scope, $sce, youtubeFactory) {
+angular.module('videoApp').controller('searchController', function (
+  $scope,
+  $sce,
+  youtubeFactory
+) {
   var vm = this
   var YOUTUBE_BASE = 'https://www.youtube.com/embed/'
 

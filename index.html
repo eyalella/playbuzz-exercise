@@ -10,7 +10,7 @@
     <div ng-app="videoApp" ng-cloak>
       <md-content class="md-padding">
         <navigation-directive></navigation-directive>
-        <ui-view></ui-view>
+        <ui-view layout-padding flex></ui-view>
       </md-content>
     </div>
 
@@ -24,7 +24,8 @@
     <script src="auth.js"></script>
     <script src="src/app.js"></script>
     <script src="src/controllers/searchController.js"></script>
-    <script src="src/services/youtubeSearchService.js"></script>
+    <script src="src/controllers/playController.js"></script>
+    <script src="src/services/extractYoutubeIdService.js"></script>
     <script src="src/directives/NavigationDirective.js"></script>
 
   </body>

@@ -1,15 +1,17 @@
-<div class="search-view" layout="column">
-  <md-input-container>
-    <label>url</label>
-    <input
-      type="text"
-      ng-model="vm.query"
-      ng-change="vm.updateVideoSrc(vm.query)"
-    >
-  </md-input-container>
-  <iframe
-    src="{{vm.src}}"
-    frameBorder="0"
-    allowFullScreen
-  />
+<div class="view" layout="column">
+  <h1 class="md-title">Play</h1>
+  <input
+    type="text"
+    ng-model="vm.query"
+    ng-change="vm.updateVideoSrc(vm.query)"
+    placeholder="Paste any valid YouTube URL to load the video..."
+    class="custom-input"
+  >
+  <div
+    class="error"
+    ng-if="!vm.valid"
+  >
+    Not a valid YouTube URL...
+  </div>
+  <iframe-directive video-id="{{vm.videoId}}" />
 </div>

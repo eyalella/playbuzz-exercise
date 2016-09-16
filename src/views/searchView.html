@@ -1,4 +1,5 @@
-<div class="search-view" layout="column">
+<div class="view" layout="column">
+  <h1 class="md-title">Search</h1>
   <md-autocomplete
     md-selected-item="vm.selectedVideo"
     md-selected-item-change="vm.updateVideoSrc()"
@@ -9,9 +10,5 @@
   >
     <span md-highlight-text="searchText">{{item.snippet.title}}</span>
   </md-autocomplete>
-  <iframe
-    src="{{vm.src}}"
-    frameBorder="0"
-    allowFullScreen
-  />
+  <iframe-directive video-id="{{vm.videoId}}" />
 </div>

@@ -1,0 +1,10 @@
+{
+  "extends" : ["standard"],
+  "rules": {
+    "strict": 0
+  },
+  globals: {
+    "angular": true,
+    "PubSub": true
+  }
+}

@@ -1,14 +1,15 @@
 <div class="search-view" layout="column">
-  <h1>Welcome! What would you like to do?</h1>
+  <h1 class="md-display-1">Welcome!</h1>
+  <p class="md-title">What would you like to do?</p>
   <md-divider></md-divider>
   <p>
     <span>Search YouTube for videos you would like to watch?</span>
-    <md-button ui-sref="search" class="md-primary">Search</md-button>
+    <md-button ng-click="vm.goToLink('search')" class="md-primary">Search</md-button>
   </p>
   <md-divider></md-divider>
   <p>
     <span>Paste YouTube URL to view the video?</span>
-    <md-button ui-sref="play" class="md-primary">Play</md-button>
+    <md-button ng-click="vm.goToLink('play')" class="md-primary">Play</md-button>
   </p>
   <md-divider></md-divider>
 </div>

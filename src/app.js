@@ -2,11 +2,14 @@ angular.module('videoApp', [
   'ui.router',
   'jtt_youtube',
   'ngMaterial'
-]).config(function($stateProvider) {
+]).config(function ($stateProvider, $urlRouterProvider) {
   var homeRoute = {
     name: 'home',
     url: '/',
-    templateUrl: 'src/views/homeView.html'
+    templateUrl: 'src/views/homeView.html',
+    controller: 'homeController',
+    controllerAs: 'vm',
+    bindToController: true
   }
 
   var searchState = {
@@ -27,8 +30,9 @@ angular.module('videoApp', [
     bindToController: true
   }
 
+  $stateProvider.state(homeRoute)
+  $stateProvider.state(searchState)
+  $stateProvider.state(playState)
 
-  $stateProvider.state(homeRoute);
-  $stateProvider.state(searchState);
-  $stateProvider.state(playState);
-});
+  $urlRouterProvider.otherwise('/')
+})

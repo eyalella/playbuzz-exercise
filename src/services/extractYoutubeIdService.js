@@ -1,6 +1,5 @@
 angular.module('videoApp').service('extractYoutubeIdService', function ($http) {
   const YOUTUBE_REGEX = /^(https?:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/
-  const YOUTUBE_BASE = 'https://www.youtube.com/embed/'
 
   this.extract = extract
 

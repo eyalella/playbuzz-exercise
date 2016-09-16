@@ -1,34 +1,45 @@
 * {
   box-sizing: border-box;
 }
-
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
-
-md-content,
-[ng-app="videoApp"] {
+md-content, [ng-app="videoApp"] {
   height: 100%;
   width: 100%;
 }
-
-md-content,
-md-nav-bar {
+md-content, md-nav-bar {
   display: flex;
   flex-direction: column;
 }
-
 ui-view {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-
-iframe,
-.search-view {
+iframe, .view {
   flex: 1;
+}
+.custom-input {
+  padding: 0 15px;
+  border: none;
+  line-height: 40px;
+  height: 40px;
+  font-size: 14px;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12)
+}
+iframe-directive {
+  flex: 1;
+  display: flex;
+}
+.error {
+  font-size: 14px;
+  color: #dd2222;
+  margin: 15px
 }

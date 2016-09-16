@@ -1,5 +1,7 @@
 # playbuzz-exercise
-A YouTube view/search app
+YouTube View/Search 
+
+[https://eyalella.github.io/playbuzz-exercise](https://eyalella.github.io/playbuzz-exercise)
 
 ## How to run
 ```

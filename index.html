@@ -8,19 +8,10 @@
   <body>
 
     <div ng-app="videoApp" ng-cloak>
-
-
       <md-content class="md-padding">
-        <md-nav-bar
-          md-selected-nav-item="currentNavItem" 
-          nav-bar-aria-label="navigation links"
-        >
-          <md-nav-item md-nav-sref="search" name="search">search</md-nav-item>
-          <md-nav-item md-nav-sref="play" name="play">play</md-nav-item>
-        </md-nav-bar>
+        <navigation-directive></navigation-directive>
         <ui-view></ui-view>
       </md-content>
-
     </div>
 
     <script src="node_modules/angular/angular.min.js"></script>
@@ -34,6 +25,7 @@
     <script src="src/app.js"></script>
     <script src="src/controllers/searchController.js"></script>
     <script src="src/services/youtubeSearchService.js"></script>
+    <script src="src/directives/NavigationDirective.js"></script>
 
   </body>
 </html>

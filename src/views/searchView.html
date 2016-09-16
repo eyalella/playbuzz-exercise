@@ -1,9 +1,10 @@
-<div layout="column">
+<div class="search-view" layout="column">
   <md-autocomplete
-    md-selected-item="selectedItem"
-    md-search-text="vm.src"
-    md-items="item in vm.getMatches(vm.src)"
-    md-item-text="item.display"
+    md-selected-item="vm.selectedVideo"
+    md-selected-item-change="vm.updateVideoSrc()"
+    md-search-text="vm.query"
+    md-items="item in vm.getMatches(vm.query)"
+    md-item-text="item.snippet.title"
   >
     <span md-highlight-text="searchText">{{item.snippet.title}}</span>
   </md-autocomplete>

@@ -1,9 +1,7 @@
 # playbuzz-exercise
 YouTube View/Search 
 
-<a target="_blank" href="https://eyalella.github.io/playbuzz-exercise">
-  https://eyalella.github.io/playbuzz-exercise
-</a>
+[https://eyalella.github.io/playbuzz-exercise](https://eyalella.github.io/playbuzz-exercise)
 
 ## How to run
 ```

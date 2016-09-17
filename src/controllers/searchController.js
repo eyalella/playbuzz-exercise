@@ -15,7 +15,9 @@ angular.module('videoApp').controller('searchController', function (
   vm.toggleAutoplay = toggleAutoplay
 
   function updateVideoSrc () {
-    vm.videoId = vm.selectedVideo.id.videoId
+    if (vm.selectedVideo && vm.selectedVideo.id) {
+      vm.videoId = vm.selectedVideo.id.videoId
+    }
   }
 
   function toggleAutoplay () {

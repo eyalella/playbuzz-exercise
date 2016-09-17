@@ -44,6 +44,7 @@ iframe-directive {
   display: flex;
 }
 iframe-directive iframe {
+  max-width: 100%;
   background: #fff;
   box-sizing: inherit;
   box-shadow:
@@ -86,4 +87,37 @@ p.option:hover {
   position: absolute;
   padding: 15px;
   font-size: 14px;
+}
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.md-autocomplete-suggestions li {
+  padding: 10px;
+  height: 110px;
+}
+md-autocomplete-parent-scope {
+  display: flex;
+  align-items: center;
+}
+md-autocomplete-parent-scope img {
+  margin-right: 10px;
+}
+md-autocomplete-parent-scope span {
+  white-space: normal;
+  line-height: normal;
+}
+md-checkbox {
+  margin: 0;
+}
+.md-autocomplete-suggestions-container li span.highlight {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  color: rgb(255,64,129);
+}
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {
+  height: 385px !important;
+  max-height: 385px !important;
 }

@@ -1,6 +1,6 @@
 <div class="view" layout="column">
-  <h1 class="md-title">Search</h1>
-  <div class="input-container">
+  <div class="page-title">
+    <h1 class="md-title">Search</h1>
     <md-checkbox
       ng-model="vm.autoplay"
       aria-label="Autoplay"
@@ -8,6 +8,8 @@
     >
       Autoplay
     </md-checkbox>
+  </div>
+  <div class="input-container">
     <md-autocomplete
       md-selected-item="vm.selectedVideo"
       md-selected-item-change="vm.updateVideoSrc()"
@@ -16,7 +18,18 @@
       md-item-text="item.snippet.title"
       placeholder="Start typing to search YouTube via the YouTube API..."
     >
-      <span md-highlight-text="searchText">{{item.snippet.title}}</span>
+      <md-item-template>
+        <img
+          src="{{item.snippet.thumbnails.default.url}}"
+          alt="{{item.snippet.channelTitle}}"
+        />
+        <span
+          md-highlight-text="vm.query"
+          md-highlight-flags="i"
+        >
+          {{item.snippet.title}}
+        </span>
+      </md-item-template>
     </md-autocomplete>
   </div>
   <iframe-directive
